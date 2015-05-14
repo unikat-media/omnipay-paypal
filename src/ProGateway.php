@@ -2,8 +2,6 @@
 
 namespace Omnipay\PayPal;
 
-use Omnipay\Common\AbstractGateway;
-
 /**
  * PayPal Pro Class
  */
