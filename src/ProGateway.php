@@ -2,8 +2,6 @@
 
 namespace Omnipay\PayPal;
 
-use Omnipay\Common\AbstractGateway;
-
 /**
  * PayPal Pro Class
  */
@@ -57,6 +55,11 @@ class ProGateway extends AbstractGateway
     public function authorize(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\PayPal\Message\ProAuthorizeRequest', $parameters);
+    }
+
+    public function void(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\PayPal\Message\ProVoidRequest', $parameters);
     }
 
     public function purchase(array $parameters = array())
